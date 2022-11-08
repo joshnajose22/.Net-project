@@ -47,9 +47,5 @@ Containerization- is an approach to software development in which an application
 The containerized application can be tested as a unit and deployed as a container image across environments with few/no modifications
 Containers offer benefits of isolation, portability, scalability, agility and control across whole application lifecycle workflow
 
-Components of SamatvaKart
-1) User Interface- customer can interact with website via user interfaces
-2) Services/API- Code that allows multiple applications built on various programming languages communicate with each other
-3) Business logic- Code for operations like discount calculation, redeem points,etc is implemented here
-4) Data Access- Code for communicating with data source like database management system is implemented here
+
 
