@@ -47,5 +47,74 @@ Containerization- is an approach to software development in which an application
 The containerized application can be tested as a unit and deployed as a container image across environments with few/no modifications
 Containers offer benefits of isolation, portability, scalability, agility and control across whole application lifecycle workflow
 
+Migration of .Net framework applications to .Net Core
+1).Net portability analyser -is an extension one can download from Visual Studio -> it looks for the compatability between different versions on .net framework and helps you to know how compatible your application is.
+Check whether the reference libraries being used in your application are compatible with .net standard ie .net framewrk -> .net standard
+Apps build in .net framework 
+4.6 and higher versions should work in .net standard 2.0
+Download required 3rd party NuGet packages from NuGet package Manager
+
+2)In asp.net applications, the csproj file has many lines of code including package references from packages.config file
+Migrate to asp.net core 2.1 .csproj file which has lesser lines of code
+
+3)Update namespace to Microsoft.ASPNETCore to make application work for cross platform\
+NuGet
+|-> Microsoft.ASPNETCore
+
+4)Convert Global.asax file to Startup.cs and add necessary configurations like ExceptionHandling, Filters, Formatters, etc in Startup.cs file
+
+5)Migrate HTTPHamdlers and HTTPModules to MiddleWare
+
+6)Use built-in dependancy injection
+for example adding entity framework db context in Startup.configuration serviceswill help us to inject the context object in required classes
+
+7)Move the configurations done in web.config file to appsettings.json file
+for example connection string configuration
+
+8)Place all static contents like html, css, js files under wwwroot folder
+
+9)Update Javascript/CSS and migrate views 
+
+10)Update Authentication and Authorization
+
+Migration of .Net Core 2.0 version applications to .Net Core 2.1 version
+1)Open project file (csproj/vbproj/fsproj) and change TargetFramework value from netcoreapp2.0 to netcoreapp2.1
+<PropertyGroup>
+  <TargetFramework>netcoreapp2.0</TargetFramework>
+</PropertyGroup>
+
+to
+
+<PropertyGroup>
+  <TargetFramework>netcoreapp2.1</TargetFramework>
+</PropertyGroup>
+
+Remove the tag <DotNetCliToolReference> as this is not used by the .net core 2.1 sdk any longer
+<ItemGroup>
+  <DotNetCliToolReference
+  Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools"
+  Versio="2.0.4" />
+</ItemGroup>
 
 
+1)Enables easy configuration and security management for web applications
+2)It provides many tools and libraries to secure web apps and manage- authentication
+                                                                    - authorization
+                                                                    - data protection
+Some of the authentication types are- windows authentication
+                                    - cookie authentication
+                                    - azure active directories
+                                    - built-in identity providers like facebook, twitter, linkedin
+ASP.NET Core provides- simple authorization
+                     - role-based authorization
+                     - claim based authorization
+                     - policy-based authorization
+                     
+For data protection during development and data transfer over server round trips, APIs are provided to offer- simplicity of configuration 
+                                                                                                            - appropriate default protection mechanism                                                                                                                 and applied automaticaly
+                                                                                                            - enforce HTTPs
+                                                                                                            - azure key vault configuration to safeguard                                                                                                               cryptographic keys and secrets used by apps                                                                                                               and services 
+3)Also provides security features to support -SSL enforcement
+                                             -prevent cross site scripting(XSS)
+                                             -Cross Orgin Resource Sharing (CORS) management
+                                             -Anti-request forgery protection(CSRF)
