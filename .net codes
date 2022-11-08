@@ -111,9 +111,9 @@ ASP.NET Core provides- simple authorization
                      - policy-based authorization
                      
 For data protection during development and data transfer over server round trips, APIs are provided to offer- simplicity of configuration 
-                                                                                                            - appropriate default protection mechanism                                                                                                                 and applied automaticaly
+                                                                                                            - appropriate default protection mechanism and applied automaticaly
                                                                                                             - enforce HTTPs
-                                                                                                            - azure key vault configuration to safeguard                                                                                                               cryptographic keys and secrets used by apps                                                                                                               and services 
+                                                                                                            - azure key vault configuration to safeguard cryptographic keys and secrets used by apps                                                                                                               and services 
 3)Also provides security features to support -SSL enforcement
                                              -prevent cross site scripting(XSS)
                                              -Cross Orgin Resource Sharing (CORS) management
