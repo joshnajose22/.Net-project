@@ -1,0 +1,33 @@
+.Net core is a cross platform, free and open source development framework primarily developed by Microsoft
+Supports OS such as Windows, Linux and MacOS for both development and deployment
+Applications for variety of devices like desktop, mobile and tablets ca be developed. It also supports application development for clound or iot.
+
+Features:
+Consistent across architecture- .net core apps have same behaviour on multiple architecture(x64bit, x86bit or ARM)
+Modular with small packages called NuGet packages-help to optimize apps
+Provide command-line tools-useful for local development and continuous integration
+Compatabe with .net framework, xamerin and mono via .net standard
+Supports applications and library creation using languages c#, vb.net and f#
+Command line interface and IDEs- Visual Studio Code, Visual Studio, VS for Mac
+
+Deployments
+1) Framework-dependant deployment- require .net core to be installed on the machine app will run
+                                 - apps and libraries have only their own code alongwith any 3rd party dependancies that are outside of .net core libraries
+                                 - apps are portable and can run on any OS without any modification
+2) Self-contained deployment= app contains everything it needs to run on
+                            - apps and libraries have only their own code plus .net core liraries and runtimewithin the application
+                            - apps can be published as an OS-Specific version of the app
+3) Framework dependant executables- produce executables(.exe file) that run on a target platform
+                                  - not self-contained
+                                  - app contains only code and any 3rd party dependancies that are outside of .net core libraries
+                                  
+How different is .net framework from .net core?
+.net framework was released as a licensed and proprietary software framework those subsequently only a few components were made open source
+.net core was released as an open source software framework
+
+Components of SamatvaKart
+1) User Interface- customer can interact with website via user interfaces\
+2) Services/API- Code that allows multiple applications built on various programming languages communicate with each other
+3) Business logic- Code for operations like discount calculation, redeem points,etc is implemented here
+4) Data Access- Code for communicating with data source like database management system is implemented here
+
