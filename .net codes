@@ -1,6 +1,6 @@
 .Net core is a cross platform, free and open source development framework primarily developed by Microsoft
 Supports OS such as Windows, Linux and MacOS for both development and deployment
-Applications for variety of devices like desktop, mobile and tablets ca be developed. It also supports application development for clound or iot.
+Applications for variety of devices like desktop, mobile and tablets ca be developed. It also supports application development for cloud or iot.
 
 Features:
 Consistent across architecture- .net core apps have same behaviour on multiple architecture(x64bit, x86bit or ARM)
@@ -10,7 +10,7 @@ Compatabe with .net framework, xamerin and mono via .net standard
 Supports applications and library creation using languages c#, vb.net and f#
 Command line interface and IDEs- Visual Studio Code, Visual Studio, VS for Mac
 
-Deployments
+Deployments:
 1) Framework-dependant deployment- require .net core to be installed on the machine app will run
                                  - apps and libraries have only their own code alongwith any 3rd party dependancies that are outside of .net core libraries
                                  - apps are portable and can run on any OS without any modification
@@ -23,10 +23,32 @@ Deployments
                                   
 How different is .net framework from .net core?
 .net framework was released as a licensed and proprietary software framework those subsequently only a few components were made open source
-.net core was released as an open source software framework
+.net framework enabled developers to build applications for a single platform ie Windows
+.net framework can be used to develop windows forms, asp.net and windows presentation foundation types of applications
+provides robust web applications framework like ASP.NET framework to develop web applications
+ASP.NET web apps can be deployed on internet information server(IIS) on Windows
+no predefined configuration to develop and deploy cloud based apps
+need to b installed as a single package and runtime envrnmt for Windows
+.net framework is the full installation in local machine called global assembly cache, GAC(C:/Windows/System) where all libraries are installed
+no robust framework or tools to simplify mobile app development
+
+.net core was released as an open source software framework. Both enterprise and individual developers can build apps without paying any licensing fees
+.net core is cross platform and supports Windows, Mac and Linux thus, making it easy for developers to also port their existing apps from one platform to another
+.net core is currently not full fleged and can be used to develop console, ASP.NET core and windows universal apps
+provides redesigned version of ASP.NET framework called ASP.NET Core to build web and cloud applications
+ASP.NET Core apps can be directly deployed on cloud or self host the application with a new hosting process
+.net core is designed with features to simplify development and deployment of cloud based apps(using cloud ready configuration)
+needs to be packaged and installed independent of underlying OS (nothing is installed by default)
+for .net core apps only required to NuGet packages are installed 
+.net core alongwith xamarin can be used to develop cross platform apps in c# with a shared code base and same set of APIs.....also can use the tools provided by xamarin to customise mobile apps on platforms like iOS, android and windows
+
+Docker- is an open source project for automating deployment of applications as portable, self sufficient containers that can run on cloud or on premises
+Containerization- is an approach to software development in which an application or service, its dependencies and its configuration abstracted as depolyment manifest files are packaged together as a container image
+The containerized application can be tested as a unit and deployed as a container image across environments with few/no modifications
+Containers offer benefits of isolation, portability, scalability, agility and control across whole application lifecycle workflow
 
 Components of SamatvaKart
-1) User Interface- customer can interact with website via user interfaces\
+1) User Interface- customer can interact with website via user interfaces
 2) Services/API- Code that allows multiple applications built on various programming languages communicate with each other
 3) Business logic- Code for operations like discount calculation, redeem points,etc is implemented here
 4) Data Access- Code for communicating with data source like database management system is implemented here
